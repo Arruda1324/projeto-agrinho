@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes Urbanas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="color-scheme" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="container">
+            <h1>Raízes Urbanas</h1>
+            <p class="subtitulo">Unindo mundos, construindo futuros sustentáveis</p>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#producao">Produção de Alimentos</a></li>
+                    <li><a href="#transporte">Transporte e Distribuição</a></li>
+                    <li><a href="#cultura">Cultura e Saberes</a></li>
+                    <li><a href="#tecnologia">Tecnologia e Sustentabilidade</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div class="acessibilidade">
+                <button id="alto-contraste" title="Alternar alto contraste">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <button id="aumentar-fonte" title="Aumentar fonte">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button id="diminuir-fonte" title="Diminuir fonte">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="banner" class="banner">
+        <div class="container">
+            <h2>Dois Mundos, Uma Conexão Vital</h2>
+            <p>Descubra como o campo e a cidade se complementam em uma relação essencial para a sociedade</p>
+            <a href="#sobre" class="btn-principal">Saiba Mais</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="sobre" class="sobre secao">
+            <div class="container">
+                <h2>Sobre a Conexão Campo-Cidade</h2>
+                <div class="grid-2">
+                    <div class="texto">
+                        <p>A <strong>relação entre o campo e a cidade</strong> é um dos pilares fundamentais para o 
+                        desenvolvimento sustentável da sociedade moderna. Enquanto o campo é responsável 
+                        pela produção de alimentos e matérias-primas, a cidade desempenha um papel crucial 
+                        no processamento, distribuição e consumo desses recursos.</p>
+                        
+                        <p>Este vínculo vai muito além da simples troca de mercadorias. Trata-se de uma 
+                        <em>interconexão de culturas, conhecimentos, tecnologias e pessoas</em> que, juntos, 
+                        formam um sistema complexo e interdependente. Compreender essa relação é 
+                        essencial para construirmos um futuro mais equilibrado e sustentável.</p>
+                    </div>
+                    <div class="imagem">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cnVyYWwlMjBhbmQlMjB1cmJhbnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" 
+                             alt="Contraste entre área rural e urbana" class="img-destaque">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="producao" class="producao secao fundo-claro">
+            <div class="container">
+                <h2>Produção de Alimentos</h2>
+                <div class="grid-2 invertido">
+                    <div class="imagem">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" 
+                             alt="Agricultor cuidando da plantação" class="img-destaque">
+                    </div>
+                    <div class="texto">
+                        <h3>Do Campo à Mesa</h3>
+                        <p>O <strong>campo é o berço da nossa alimentação</strong>. Nas áreas rurais, agricultores 
+                        familiares e grandes produtores cultivam os alimentos que chegam às mesas urbanas 
+                        diariamente. A agricultura não apenas fornece sustento, mas também é responsável 
+                        pela segurança alimentar da população urbana.</p>
+                        
+                        <p>Por sua vez, as <em>cidades oferecem mercados consumidores</em>, tecnologias agrícolas 
+                        e políticas públicas que impactam diretamente o modo de produção rural. Os centros 
+                        urbanos também abrigam centros de pesquisa que desenvolvem melhorias para o setor 
+                        agrícola, criando uma relação de troca constante.</p>
+                        
+                        <ul class="lista-beneficios">
+                            <li>Diversificação da produção agrícola</li>
+                            <li>Valorização dos produtos locais</li>
+                            <li>Sistemas de rastreabilidade de alimentos</li>
+                            <li>Cadeias curtas de comercialização</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="transporte" class="transporte secao">
+            <div class="container">
+                <h2>Transporte e Distribuição</h2>
+                <div class="grid-2">
+                    <div class="texto">
+                        <h3>Pontes de Conexão</h3>
+                        <p>Os sistemas de <strong>transporte e logística</strong> são verdadeiras artérias que conectam 
+                        o campo à cidade. A infraestrutura de estradas, ferrovias e hidrovias permite que os 
+                        produtos agrícolas cheguem aos centros urbanos com eficiência, enquanto insumos, 
+                        tecnologias e serviços seguem o caminho inverso.</p>
+                        
+                        <p>A <em>cadeia de distribuição</em> moderna não seria possível sem essa interação contínua. 
+                        Cada vez mais, as tecnologias digitais otimizam esse processo, reduzindo perdas e 
+                        conectando produtores rurais diretamente aos consumidores urbanos através de 
+                        aplicativos e plataformas online.</p>
+                        
+                        <blockquote class="citacao">
+                            "A eficiência da distribuição é tão importante quanto a própria produção. De nada 
+                            adianta produzir abundância no campo se não houver meios de levá-la à cidade."
+                        </blockquote>
+                    </div>
+                    <div class="imagem">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2QlMjBkaXN0cmlidXRpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80" 
+                             alt="Sistema de distribuição de alimentos" class="img-destaque">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultura" class="cultura secao fundo-claro">
+            <div class="container">
+                <h2>Cultura e Trocas de Saberes</h2>
+                <div class="grid-2 invertido">
+                    <div class="imagem">
+                        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cnVyYWwlMjBjdWx0dXJlfGVufDB8fDB8fHww&w=1000&q=80" 
+                             alt="Festival cultural rural" class="img-destaque">
+                    </div>
+                    <div class="texto">
+                        <h3>A Riqueza da Diversidade</h3>
+                        <p>A relação campo-cidade vai muito além do econômico: é também um <strong>intercâmbio 
+                        cultural constante</strong>. As tradições, festas populares, gastronomia e artesanato do 
+                        meio rural enriquecem o patrimônio cultural do país e encontram nos centros 
+                        urbanos espaços de valorização e preservação.</p>
+                        
+                        <p>Ao mesmo tempo, as <em>universidades e centros culturais urbanos</em> contribuem com 
+                        conhecimentos técnicos e científicos que podem ser adaptados às realidades 
+                        rurais. Este fluxo de saberes fortalece ambos os ambientes e cria pontes para o 
+                        desenvolvimento territorial equilibrado.</p>
+                        
+                        <div class="depoimento">
+                            <p>"Nasci no campo, mas estudei agronomia na cidade. Hoje, aplico conhecimentos 
+                            científicos na propriedade da minha família, respeitando os saberes tradicionais 
+                            que aprendi com meus avós. Esta combinação tem sido nossa maior força."</p>
+                            <p class="autor">— Maria Silva, Agricultora e Engenheira Agrônoma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologia" class="tecnologia secao">
+            <div class="container">
+                <h2>Tecnologia e Sustentabilidade</h2>
+                <div class="grid-2">
+                    <div class="texto">
+                        <h3>Inovação para um Futuro Melhor</h3>
+                        <p>A <strong>tecnologia</strong> tem transformado profundamente a relação campo-cidade. 
+                        Agricultura de precisão, drones, sensores IoT e satélites permitem ao produtor 
+                        rural otimizar recursos, aumentar produtividade e reduzir impactos ambientais, 
+                        enquanto as cidades se beneficiam de um fornecimento alimentar mais eficiente 
+                        e sustentável.</p>
+                        
+                        <p>A <em>sustentabilidade</em> é o ponto de encontro essencial nesta conexão. 
+                        Práticas como agroecologia, sistemas agroflorestais e economia circular criam 
+                        modelos onde campo e cidade colaboram para enfrentar desafios comuns como 
+                        as mudanças climáticas, a segurança hídrica e a preservação da biodiversidade.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">Agricultura 4.0</span>
+                            <span class="tag">Cidades Inteligentes</span>
+                            <span class="tag">Energia Renovável</span>
+                            <span class="tag">Economia Circular</span>
+                            <span class="tag">Conservação Ambiental</span>
+                        </div>
+                    </div>
+                    <div class="imagem">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFybSUyMHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D&w=1000&q=80" 
+                             alt="Tecnologia aplicada no campo" class="img-destaque">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Nova seção: Linha do Tempo -->
+        <section id="linha-tempo" class="secao">
+            <div class="container fade-in">
+                <h2>Linha do Tempo: Conexão Campo-Cidade</h2>
+                <p class="centralizado">A evolução histórica da relação entre os ambientes rurais e urbanos no Brasil</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item left fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>1950</h3>
+                            <h4>Êxodo Rural</h4>
+                            <p>Início da industrialização intensiva que marca o movimento migratório do campo para as cidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>1970</h3>
+                            <h4>Modernização Agrícola</h4>
+                            <p>Revolução Verde e intensificação do uso de tecnologia no campo, transformando as relações de produção.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>1990</h3>
+                            <h4>Consciência Ecológica</h4>
+                            <p>Aumento da demanda por produtos orgânicos e início do movimento de consumo consciente nas cidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>2000</h3>
+                            <h4>Agricultura Familiar</h4>
+                            <p>Reconhecimento da importância da agricultura familiar e criação de políticas públicas específicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>2010</h3>
+                            <h4>Tecnologias de Conexão</h4>
+                            <p>Aplicativos e plataformas digitais conectam produtores rurais diretamente aos consumidores urbanos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>2020</h3>
+                            <h4>Pandemia e Valorização</h4>
+                            <p>A pandemia reforça a importância da segurança alimentar e dos produtores locais no abastecimento das cidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left fade-in-delay">
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <h4>Integração Sustentável</h4>
+                            <p>Projeto Conexão Campo-Cidade consolida um novo modelo de integração com foco na sustentabilidade e equilíbrio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova seção: Materiais para Download -->
+        <section id="materiais" class="secao fundo-claro">
+            <div class="container fade-in">
+                <h2>Materiais para Download</h2>
+                <p class="centralizado">Acesse e baixe gratuitamente guias, cartilhas e infográficos sobre a conexão campo-cidade.</p>
+                
+                <div class="materiais-grid">
+                    <!-- Material 1 -->
+                    <div class="material-card fade-in-delay">
+                        <div class="material-icon">
+                            <i class="far fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Guia do Consumo Consciente</h3>
+                            <p>Orientações práticas para consumidores urbanos sobre como apoiar produtores locais e fazer escolhas sustentáveis.</p>
+                            <div class="material-meta">
+                                <span><i class="fas fa-file-alt"></i> PDF - 2.5 MB</span>
+                                <span><i class="far fa-calendar-alt"></i> Atualizado: Mai/2025</span>
+                            </div>
+                            <a href="https://<Arruda1324>.github.io/<projeto-agrinho>/materiais/Guiaeducativo.pdf" class="btn-principal" download><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material 2 -->
+                    <div class="material-card fade-in-delay">
+                        <div class="material-icon">
+                            <i class="far fa-file-pdf"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Cartilha de Agricultura Familiar</h3>
+                            <p>Informações sobre técnicas sustentáveis para pequenos produtores e como estabelecer conexões diretas com o mercado urbano.</p>
+                            <div class="material-meta">
+                                <span><i class="fas fa-file-alt"></i> PDF - 3.8 MB</span>
+                                <span><i class="far fa-calendar-alt"></i> Atualizado: Mar/2025</span>
+                            </div>
+                            <a href="https://<Arruda1324>.github.io/<projeto-agrinho>/materiais/Materialescolar.pdf" class="btn-principal" download><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Material 3 -->
+                    <div class="material-card fade-in-delay">
+                        <div class="material-icon">
+                            <i class="far fa-file-image"></i>
+                        </div>
+                        <div class="material-info">
+                            <h3>Infográfico: Ciclo Alimentar Sustentável</h3>
+                            <p>Visualização do ciclo completo dos alimentos, desde a produção rural até o consumo urbano e retorno dos resíduos.</p>
+                            <div class="material-meta">
+                                <span><i class="fas fa-file-alt"></i> PDF - 1.2 MB</span>
+                                <span><i class="far fa-calendar-alt"></i> Atualizado: Abr/2025</span>
+                            </div>
+                            <a href="https://<Arruda1324>.github.io/<projeto-agrinho>/materiais/Sustentabilidade.pdf" class="btn-principal" download><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mural Colaborativo Aprimorado -->
+        <section id="mural" class="secao">
+            <div class="container fade-in">
+                <h2 style="margin-bottom: 1rem;">Mural Colaborativo</h2>
+                <p class="centralizado">Compartilhe conosco suas experiências sobre a conexão campo-cidade. Participe da nossa comunidade!</p>
+                
+                <!-- Formulário para adicionar comentário -->
+                <div class="comentario-form-container fade-in-delay">
+
+                </div>
+                
+                <!-- Grid de comentários existentes -->
+                <div class="comentarios-grid">
+                    <!-- Comentário 1 -->
+                    <div class="comentario fade-in-delay slide-in-left">
+                        <div class="comentario-header">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto de Maria Silva" class="comentario-avatar">
+                            <div>
+                                <p class="comentario-usuario">Maria Silva</p>
+                                <p class="comentario-data">Produtora Rural - 10/03/2025</p>
+                            </div>
+                        </div>
+                        <p class="comentario-texto">"Graças à conexão campo-cidade, consegui estabelecer uma parceria direta com restaurantes da capital, eliminando intermediários e aumentando minha renda familiar."</p>
+                    </div>
+                    
+                    <!-- Comentário 2 -->
+                    <div class="comentario fade-in-delay slide-in-right">
+                        <div class="comentario-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de João Pereira" class="comentario-avatar">
+                            <div>
+                                <p class="comentario-usuario">João Pereira</p>
+                                <p class="comentario-data">Consumidor Urbano - 22/02/2025</p>
+                            </div>
+                        </div>
+                        <p class="comentario-texto">"Conhecer pessoalmente os produtores dos alimentos que consumo mudou completamente minha relação com a comida. Agora valorizo muito mais o trabalho do campo."</p>
+                    </div>
+                    
+                    <!-- Comentário 3 -->
+                    <div class="comentario fade-in-delay slide-in-left">
+                        <div class="comentario-header">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Foto de Ana Luiza" class="comentario-avatar">
+                            <div>
+                                <p class="comentario-usuario">Ana Luiza</p>
+                                <p class="comentario-data">Pesquisadora - 15/01/2025</p>
+                            </div>
+                        </div>
+                        <p class="comentario-texto">"A tecnologia tem sido fundamental para aproximar estes dois mundos. Aplicativos de conexão direta entre produtor e consumidor são o futuro da agricultura sustentável."</p>
+                    </div>
+                    
+                    <!-- Comentário 4 (Novo) -->
+                    <div class="comentario fade-in-delay slide-in-right">
+                        <div class="comentario-header">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Foto de Carlos Mendes" class="comentario-avatar">
+                            <div>
+                                <p class="comentario-usuario">Carlos Mendes</p>
+                                <p class="comentario-data">Engenheiro Agrônomo - 05/04/2025</p>
+                            </div>
+                        </div>
+                        <p class="comentario-texto">"A conexão campo-cidade precisa ir além do comércio de alimentos. É necessário um intercâmbio cultural e educacional que valorize ambos os conhecimentos."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato secao fundo-claro">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p class="centralizado">Participe do diálogo sobre a conexão campo-cidade e compartilhe suas experiências!</p>
+                
+                <form class="formulario-contato" action="#" method="post" data-form-type="contact" data-integration="firebase">
+                    <div class="campo-form">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required minlength="3" maxlength="100" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+">
+                        <div class="erro-feedback">Por favor, insira um nome válido.</div>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        <div class="erro-feedback">Por favor, insira um e-mail válido.</div>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="relacao">Qual sua relação com o tema?</label>
+                        <select id="relacao" name="relacao" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="rural">Vivo/trabalho em área rural</option>
+                            <option value="urbano">Vivo/trabalho em área urbana</option>
+                            <option value="ambos">Tenho vivência nos dois ambientes</option>
+                            <option value="estudante">Sou estudante/pesquisador da área</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <div class="erro-feedback">Por favor, selecione uma opção.</div>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="mensagem">Sua mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Compartilhe suas ideias, perguntas ou experiências sobre a conexão campo-cidade" rows="5" required minlength="10" maxlength="1000"></textarea>
+                        <div class="erro-feedback">Por favor, insira uma mensagem com pelo menos 10 caracteres.</div>
+                    </div>
+                    <div class="campo-form checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Desejo receber novidades e informações sobre o tema</label>
+                    </div>
+                    
+                    <div class="campo-form checkbox">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Li e concordo com os <a href="#politica-privacidade">termos de uso e política de privacidade</a></label>
+                        <div class="erro-feedback">Você deve concordar com os termos para prosseguir.</div>
+                    </div>
+                    
+                    <button type="submit" class="btn-principal">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Seção de Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Receba Novidades</h3>
+            <p>Cadastre-se para receber atualizações sobre o projeto Conexão Campo-Cidade, notícias e artigos sobre a relação entre os ambientes rurais e urbanos.</p>
+            <form class="newsletter-form" action="#" method="post" data-form-type="newsletter" data-integration="google-sheets">
+                <input type="email" class="newsletter-input" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail para newsletter">
+                <button type="submit" class="newsletter-btn">Inscrever</button>
+            </form>
+            <div class="mensagem-sucesso" id="newsletter-sucesso">Obrigado! Você foi inscrito com sucesso.</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="coluna">
+                    <h3>Conexão Campo-Cidade</h3>
+                    <p>Um projeto dedicado a fortalecer os laços entre os ambientes rurais e urbanos, promovendo um futuro mais sustentável e equilibrado.</p>
+                </div>
+                
+                <div class="coluna">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#producao">Produção de Alimentos</a></li>
+                        <li><a href="#transporte">Transporte e Distribuição</a></li>
+                        <li><a href="#cultura">Cultura e Saberes</a></li>
+                        <li><a href="#tecnologia">Tecnologia e Sustentabilidade</a></li>
+                        <li><a href="#linha-tempo">Linha do Tempo</a></li>
+                        <li><a href="#mural">Mural Colaborativo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="coluna">
+                    <h3>Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Raízes Urbanas. Todos os direitos reservados. Este projeto é 100% autoral.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <input type="checkbox" id="scroll-check">
+    <a href="#cabecalho" class="voltar-ao-topo" aria-label="Voltar ao topo da página" id="btn-topo">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Aviso de Cookies (LGPD) -->
+    <input type="checkbox" id="cookie-check">
+    <div class="cookie-consent">
+        <div class="cookie-content">
+            <p>Este site usa cookies para garantir que você obtenha a melhor experiência. Ao continuar navegando, você concorda com nossa <a href="#politica-privacidade">Política de Privacidade</a> em conformidade com a LGPD.</p>
+        </div>
+        <div class="cookie-buttons">
+            <label for="cookie-check" class="cookie-btn cookie-btn-aceitar">Aceitar</label>
+            <label for="cookie-check" class="cookie-btn cookie-btn-recusar">Recusar</label>
+        </div>
+    </div>
+
+    <script>
+        // Menu responsivo
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.querySelector('.menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('ativo');
+                menuToggle.classList.toggle('ativo');
+            });
+            
+            // Funcionalidade de acessibilidade
+            const btnAltoContraste = document.getElementById('alto-contraste');
+            const btnAumentarFonte = document.getElementById('aumentar-fonte');
+            const btnDiminuirFonte = document.getElementById('diminuir-fonte');
+            
+            btnAltoContraste.addEventListener('click', function() {
+                document.body.classList.toggle('alto-contraste');
+                localStorage.setItem('alto-contraste', document.body.classList.contains('alto-contraste'));
+            });
+            
+            // Verificar se o alto contraste estava ativo
+            if (localStorage.getItem('alto-contraste') === 'true') {
+                document.body.classList.add('alto-contraste');
+            }
+            
+            // Tamanho da fonte
+            let tamanhoFonte = parseInt(localStorage.getItem('tamanho-fonte')) || 100;
+            
+            function atualizarTamanhoFonte() {
+                document.documentElement.style.fontSize = `${tamanhoFonte}%`;
+                localStorage.setItem('tamanho-fonte', tamanhoFonte);
+            }
+            
+            // Aplicar tamanho de fonte salvo
+            atualizarTamanhoFonte();
+            
+            btnAumentarFonte.addEventListener('click', function() {
+                if (tamanhoFonte < 150) {
+                    tamanhoFonte += 10;
+                    atualizarTamanhoFonte();
+                }
+            });
+            
+            btnDiminuirFonte.addEventListener('click', function() {
+                if (tamanhoFonte > 70) {
+                    tamanhoFonte -= 10;
+                    atualizarTamanhoFonte();
+                }
+            });
+            
+            // Navegação suave para links âncora
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Fechar o menu em dispositivos móveis após clicar
+                        if (window.innerWidth < 768) {
+                            menu.classList.remove('ativo');
+                            menuToggle.classList.remove('ativo');
+                        }
+                    }
+                });
+            });
+            
+            // Funcionalidade de ativação do botão de volta ao topo
+            window.addEventListener('scroll', function() {
+                const scrollCheckbox = document.getElementById('scroll-check');
+                scrollCheckbox.checked = window.scrollY > 200;
+            });
+        });
+    </script>
+    
+    <!-- Arquivos JavaScript para funcionalidades avançadas -->
+    <script src="script.js"></script>
+    <!-- OpenLayers JS -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.js"></script>
+</body>
+</html>

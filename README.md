@@ -28,6 +28,7 @@ Este site foi desenvolvido com o objetivo de evidenciar a interdependência e a 
 
 - **HTML5**: Marcação semântica para estruturação adequada do conteúdo
 - **CSS3**: Estilização avançada com flexbox, grid e media queries para responsividade
+- - **JavaScript (ES6+)**: Interatividade, animações, validação de formulários, sistema de comentários, animações de rolagem e controle de acessibilidade
 - **Font Awesome**: Ícones utilizados no site
 - **Google Fonts**: Fontes Montserrat e Open Sans (carregadas através do CSS)
 
